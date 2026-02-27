@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จิตอาสา</title>
+    <link rel="stylesheet" href="mainstyle.css"> <!--เชื่อมโยงไฟล์ CSS เข้ากับ HTML-->
+</head>
+<body>
+    <nav>
+        <div class="Content">
+            <div class="nav-Con">
+                <div class="logo3"><a href="index.html"><img src="image/logo.png" alt=""></a></div>
+                    <ul class="menu">
+                        <li><a href="#Project">Project</a></li>
+<li><a href="#Study">Study</a></li>
+                        
+                    </ul>
+                </div>
+        </div>
+    </nav>
+<section id="Project" class="content-section">
+        <div class="content-content">
+            <h1>Project</h1>
+            <p></p>
+            <div class="mini-rose">
+    <h4>โปรเจกต์ระบบดูแลต้นกุหลาบด้วยแอปพลิเคชั่น</h4>
+
+    <div class="rose-img-row">
+        <img src="image/rose.jpg" alt="รูปต้นกุหลาบ">
+        <img src="image/rose1.png" class="small-img" alt="รูปต้นกุหลาบ">
+    </div>
+
+    <div class="item-rose">
+        <p>
+                โปรเจกต์นี้จะแสดงอุณหภูมิและความชื้นของดินบนแดชบอร์ด
+            สามารถควบคุมการให้น้ำต้นกุหลาบ และเปิดไฟในวันที่แสงแดดน้อยได้
+            ในอนาคตมีแผนพัฒนาต่อเพิ่มเติม
+        </p>
+    </div>
+</div>
+            <div class="mini-car">
+    <h4>มินิโปรเจกต์รถบังคับ</h4>
+
+
+    <div class="car-content">
+        <div class="item-car">
+            <p>
+                โปรเจกต์นี้เป็นมินิโปรเจกต์ที่ทำขึ้นเพื่อเรียนรู้การเขียนโค้ดภาษา Python และการใช้งาน Raspberry Pi โดยโปรเจกต์นี้จะเป็นการสร้างรถบังคับที่สามารถควบคุมได้ผ่านแอปพลิเคชั่นบนมือถือ ซึ่งจะช่วยให้เราเข้าใจการทำงานของเซ็นเซอร์และการควบคุมอุปกรณ์ผ่านโค้ดได้ดีขึ้น
+            </p>
+        </div>
+
+        <div class="img-car">
+            <img src="image/รถ.jpg" alt="รถบังคับ">
+        </div>
+    </div>
+</div>
+        
+
+            <div class="plc">
+    <h4>โปรเจกต์ชุดทดสอบมาตรฐาน PLC ระดับ 1-3</h4>
+
+    <div class="plc-content">
+        <div class="img-plc">
+            <img src="image/plc.jpg" alt="รูปโปรเจกต์ PLC">
+        </div>
+
+        <div class="item-plc">
+            <p>
+                โปรเจกต์นี้เป็นการสร้างชุดทดสอบมาตรฐาน PLC ระดับ 1-3 
+                ซึ่งจะช่วยให้ผู้ที่สนใจสามารถทดสอบความรู้และพัฒนาทักษะด้าน PLC 
+                ได้อย่างมีประสิทธิภาพ ครอบคลุมเนื้อหาในระดับต่าง ๆ
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+<section id="Study" class="content-section-1">
+        <div class="content-content-1">
+            <h1>Study</h1>
+            <p></p>
+            <h4>การเรียนรู้การสร้างโมเดล 3D ด้วยโปรแกรม Blender</h4><br>
+            <div class="threed"> <!--แบนเนอร์ 3D-->
+                <div class="img-row">
+                    <div class="img-threed">
+                        <img src="image/3d.jpg" alt="">
+                    </div>                
+                    <div class="img-threed">
+                        <img src="image/3d1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item-threed">
+                    <p>การเรียนรู้การสร้างโมเดล 3D ด้วยโปรแกรม Blender เป็นกระบวนการที่ช่วยให้เราเข้าใจและสามารถสร้างสรรค์งานศิลปะในรูปแบบสามมิติได้ โดยโปรแกรม Blender มีเครื่องมือและฟีเจอร์ที่หลากหลายที่ช่วยให้เราสามารถสร้างโมเดล 3D ได้อย่างมีประสิทธิภาพ ไม่ว่าจะเป็นการสร้างตัวละคร วัตถุ หรือฉากต่าง ๆ ในโลกเสมือนจริง</p>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+
+<!--ปุ่มย้อนกลับเมนู-->
+<button id="backToTop">▲</button>
+<!--สคริปต์ของปุ่มย้อนหลับด้านบน-->    
+<script>
+const btn = document.getElementById("backToTop");
+
+window.onscroll = function(){
+    if(document.documentElement.scrollTop > 200){
+        btn.style.display = "block";
+    }else{
+        btn.style.display = "none";
+    }
+};
+
+btn.onclick = function(){
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
+</script>
+</body>
+</html>

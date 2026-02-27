@@ -1,0 +1,861 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { /* ทำให้การเลื่อนหน้าเป็นแบบนุ่มนวล */
+  scroll-behavior: smooth;
+}
+
+
+/*หน้าแรก*/
+.container{ /* ดึงข้อมูลในคลาสมาใช้ */
+    max-width: 1140px; 
+    margin: 0 auto;
+}
+
+nav{
+    padding: 1rem;
+    background-color: #911005; /* สีแถบเมนู */
+}
+
+.nav-con{
+    display: flex;
+    justify-content: space-between; /* จัดวางโลโก้และเมนูให้ห่างกัน */
+    align-items: center; /* จัดวางให้อยู่กึ่งกลางแนว*/
+}
+
+/* .logo a{ */
+/*    color: #fff;
+    font-size: 2rem;
+    font-weight: bold; /* ตัวหนา */
+    /* text-decoration: none; /* เอาขีดเส้นใต้ออก */ /*
+} */
+
+.logo a img{ /* จัดการรูปภาพโลโก้ */
+    
+    width: 85px;
+    height: auto;
+   
+}
+
+.menu {
+    list-style: none; /* เอาจุดหน้าเมนูออก */
+    display: flex; /* จัดเรียงเมนูในแนวนอน */
+}
+
+.menu li{
+    margin-left: 1rem; /* เว้นระยะห่างระหว่างเมนู */
+}
+
+.menu li a{ /* จัดการรูปแบบแถบเมนู */
+    color: #fff;
+    text-decoration: none; /* เอาขีดเส้นใต้ออก */
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem; /* เพิ่มพื้นที่คลิก */
+    display: block; /* ทำให้อยู่กึ่งกลาง */
+}
+
+.maincontent{
+    padding: 2rem; /* เพิ่มพื้นที่รอบๆ เนื้อหา */
+    background-color: #e0dbdb; /* สีพื้นหลังของเนื้อหา */
+}
+
+.maincontent-con{
+    display: flex; /* ทำให้ข้อมูลในคอนเทนต์เรียงกันในแนวนอน */
+    gap: 2rem; /* เว้นระยะห่างระหว่างคอนเทนต์ */
+}
+
+.maincontent-info{
+    width: 100%;
+    padding: 2rem;
+    flex: 1; /* ให้คอนเทนต์นี้ขยายเต็มที่ */
+}
+
+.maincontent-info h3{
+    font-size: 2rem;
+    
+}
+
+.maincontent-info h2{
+    font-size: 3rem;
+    margin: 1rem 0; /* เว้นระยะห่างด้านบนและล่าง */
+    
+}
+
+.maincontent-info p{
+    margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
+    
+}
+
+.maincontent-info .maincontent-btn{
+    background-color: #db5656; /* สีปุ่ม */
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none; /* เอาขีดเส้นใต้ออก */
+    border-radius: 20px; /* ทำให้มุมปุ่มโค้ง */
+
+}
+
+.maincontent-img img{
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.maincontent-img{ /* ใส่แยกออกจากการจัดการรูปโดยตรงเพราะขอบมันจะบังมุมโค้ง*/
+    padding: 2rem;
+}
+/*ทำเลื่อนภาพ*/
+.content {
+  overflow: hidden;
+  cursor: grab;
+}
+.content:active {
+  cursor: grabbing;
+}
+.content-con {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+}
+
+.content-item {
+  flex: 0 0 calc((100% - 60px) / 3);
+}
+
+
+
+/*.content-con{
+    display: grid; /* ใช้ Grid Layout เพื่อจัดเรียงคอนเทนต์ */
+/*    grid-template-columns: 1fr 1fr 1fr; /* แบ่งคอนเทนต์เป็น 3 คอลัมน์เท่าๆ กัน */
+/*    column-gap: 2rem; */ /*
+    
+} */
+
+.content-item img{
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* ทำให้มุมรูปภาพโค้ง */
+}
+
+.content-title{
+    margin: 2rem 0; /* เว้นระยะห่างด้านบนและล่าง */
+}
+
+.content-item img{
+    width: 100%;
+
+}
+
+.content-item h4{
+    margin-top: 1rem; /* เว้นระยะห่างด้านบน */
+    
+}
+
+.content-item p{
+    margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
+}
+
+.content-item a{
+    display: inline-block; /* ทำให้ปุ่มเป็นบล็อกที่สามารถคลิกได้ */
+    background-color: #911005; /* สีปุ่ม */
+    color: #fff;
+    padding: 0.5rem 1rem; /* กำหนดพื้นที่ภายในปุ่ม */
+    border-radius: 20px; /* ทำให้มุมปุ่มโค้ง */
+    text-decoration: none; /* เอาขีดเส้นใต้ออก */
+}
+
+.profile{ /* ข้อมูลโปรไฟล์ */
+    gap: 2rem; /* เว้นระยะห่างระหว่างข้อมูลในโปรไฟล์ */
+    padding: 2rem 0; /* เพิ่มพื้นที่ด้านบนและล่าง */
+}
+
+.profile-item{ /* ข้อมูลในโปรไฟล์ */
+    align-items: center; /* จัดวางให้อยู่กึ่งกลางแนวตั้ง */
+    gap: 2rem; /* เว้นระยะห่างระหว่างข้อมูลในโปรไฟล์ */
+}
+.profile-item{
+    max-width: 800px;
+    text-align: left;
+    line-height: 1.9;
+    font-size: 16px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+    margin: 0 auto;
+}
+
+/* เอฟเฟกต์ลอยตอน hover */
+.profile-item:hover{
+    transform: translateY(-6px);
+}
+
+.profile-item h4{ /* ชื่อหัวข้อในโปรไฟล์ */
+    margin-top: 1rem; /* เว้นระยะห่างด้านบน */
+    
+
+}
+
+.profile-item p{ /* เนื้อหาในโปรไฟล์ */
+    margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
+    padding-left: 2rem; /* เพิ่มพื้นที่ด้านซ้าย */
+}
+
+
+/* จัดการแบนเนอร์ล่างสุด */
+.footer-top{
+    margin-top: 2rem; /* เว้นระยะห่างด้านบน */
+    padding: 2rem; /* เพิ่มพื้นที่รอบๆ แบนเนอร์ */
+    background-color: #393939; /* สีพื้นหลังของแบนเนอร์ */
+    color: #fff; /* สีข้อความในแบนเนอร์ */
+    
+}
+
+.footer-top-con{
+    display: grid; /* ใช้ Grid Layout เพื่อจัดเรียงคอนเทนต์ */
+    grid-template-columns: 1fr 1fr; /* แบ่งคอนเทนต์เป็น 2 คอลัมน์เท่าๆ กัน */
+    column-gap: 2rem; /* เว้นระยะห่างระหว่างคอลัมน์ */
+}
+
+.footer-top-item-con{
+    display: flex;
+    margin: 1rem 0; /* เว้นระยะห่างด้านบนและล่าง */
+}
+
+.footer-top-item-con .contact{
+    color: #fff;
+}
+
+.footer-top-item:nth-child(2) h4,
+.footer-top-item:nth-child(3){
+    margin-bottom: 1rem; /* เว้นระยะห่างด้านล่าง */
+}
+
+.footer-buttom{
+    background-color: #393939; /* สีพื้นหลังของแบนเนอร์ */
+    color: #fff; /* สีข้อความในแบนเนอร์ */
+    padding: 1rem; /* เพิ่มพื้นที่รอบๆ แบนเนอร์ */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+
+.footer-top-item-social-h4{
+    margin-top: 1rem; /* เว้นระยะห่างด้านบน */
+    
+}
+
+.footer-top-item-con .contact img{
+    width: 20px; /* กำหนดขนาดของไอคอน */
+    height: auto;
+    margin-right: 0.5rem; /* เว้นระยะห่างระหว่างไอคอนและข้อความ */
+}
+
+.footer-top-item-con .info .info-title h5{
+    margin: 0; /* เอาระยะห่างออกจากหัวข้อ */
+    font-weight: normal; /* ลบตัวหนา */
+}
+
+/*หน้ากิจกรรม*/
+
+.logo2 a img{
+    width: 85px;
+    height: auto;
+}
+
+.activity{ /* ดึงข้อมูลในคลาสมาใช้ */
+    max-width: 1140px; 
+    margin: 0 auto;
+}
+
+nav{
+    padding: 1rem;
+    background-color: #911005; /* สีแถบเมนู */
+}
+
+.nav-act{
+    display: flex;
+    justify-content: space-between; /* จัดวางโลโก้และเมนูให้ห่างกัน */
+    align-items: center; /* จัดวางให้อยู่กึ่งกลางแนว*/
+}
+
+.activity-content .img{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;        /* เว้นระยะห่างรูป */
+    flex-wrap: wrap;  /* จอเล็กแล้วลงบรรทัดใหม่ */
+}
+
+.activity-content h1{
+    margin: 2rem 0; /* เว้นระยะห่างด้านบนและล่าง */
+}
+
+.activity-content p{
+    margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+
+.activity-content .item{
+    text-align: center;
+    max-width: 350px;
+}
+
+.activity-content .item img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.activity-content-1 .img-1{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.activity-content-1 h1{
+    margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
+}
+
+.activity-content-1 .item-1 img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.activity-content-1 .img-1 p{
+    text-align: center;
+    width: 100%;  /* ให้ข้อความลงมาบรรทัดใหม่ */
+    
+    
+}
+/*อบรมRobot*/
+.activity-content .item-2 img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.activity-content-1 .img-2{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.activity-content-1 .item-2 img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+.activity-content-1 p{
+    text-align: center;
+    width: 100%;  /* ให้ข้อความลงมาบรรทัดใหม่ */
+    margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
+}
+.activity-content .item-2-1 img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.activity-content-1 .img-2-1{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.activity-content-1 .item-3 img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+/*การคิดอย่างเป็นระบบ*/
+.activity-content .item-3 img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.activity-content-1 .img-3{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.activity-content-1 .item-3 img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+/*อบรมยาเสพติด*/
+.activity-content .item-4 img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.activity-content-1 .img-4{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.activity-content-1 .item-4 img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+/*ฉาก*/
+.activity-content-1 .img-5{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.activity-content-1 .item-5 img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.activity-content-1 .img-5-1{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/*วางพานพุ่ม*/
+
+.activity-content .img-k{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.activity-content .item-k img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+.activity-content .img-k img{
+    width: 100%;
+    max-width: 730px;
+    height: auto;
+    border-radius: 10px;
+}
+.activity-content .img-k-1{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/*หน้าโปรเจค*/
+
+.logo3 a img{
+    width: 85px;
+    height: auto;
+}
+
+.Content{ /* ดึงข้อมูลในคลาสมาใช้ */
+    max-width: 1140px; 
+    margin: 0 auto;
+}
+
+nav{
+    padding: 1rem;
+    background-color: #911005; /* สีแถบเมนู */
+}
+
+.nav-Con{
+    display: flex;
+    justify-content: space-between; /* จัดวางโลโก้และเมนูให้ห่างกัน */
+    align-items: center; /* จัดวางให้อยู่กึ่งกลางแนว*/
+}
+.content-content-1 h1{
+    margin: 2rem 0; /* เว้นระยะห่างด้านบนและล่าง */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+.content-content h1{
+    margin: 2rem 0; /* เว้นระยะห่างด้านบนและล่าง */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+
+/*อบรม 3D print*/
+.threed {
+    display: flex;
+    align-items: flex-start;   /* จัดแนวด้านบน */
+    gap: 20px;                 /* ระยะห่างแต่ละอัน */
+    flex-wrap: wrap;           /* ถ้าจอเล็กให้ตัดบรรทัด */
+    justify-content: center;   /* 👈 ทำให้อยู่กลางแนวนอน */
+}
+.content-content-1 h4 {
+    width: 100%;              /* ให้หัวข้อเต็มแถว */
+    text-align: center;       /* จัดหัวข้อให้อยู่กึ่งกลาง */
+}
+.img-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;   /* 👈 ทำให้อยู่กลางแนวนอน */
+}
+.img-threed img {
+    width: 350px;   /* ปรับขนาดตามต้องการ */
+    height: auto;
+    border-radius: 10px; /* ทำให้มุมรูปภาพโค้ง */
+}
+/* กล่องข้อความทุกโปรเจกต์ */
+.item-threed{
+    max-width: 720px;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 16px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+   
+}
+
+/* เอฟเฟกต์ลอยตอน hover */
+.item-threed:hover{
+    transform: translateY(-6px);
+}
+/*rose*/
+.mini-rose{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.rose-img-row{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;   /* กันรูปยืดตาม flex */
+    gap:20px;
+    margin:20px 0;
+}
+
+/* รีเซ็ตไม่ให้กฎ img อื่นในเว็บมาทับ */
+.rose-img-row img{
+    display:block;
+    height:auto;
+    max-width:none;
+    border-radius:10px;
+}
+
+/* รูปใหญ่ */
+.rose-img-row img:first-child{
+    width:350px;
+}
+
+/* รูปเล็ก */
+.rose-img-row img.small-img{
+    width:250px;
+    margin-top:40px;   /* 👈 ปรับตัวเลขตามต้องการ */
+}
+/* กล่องข้อความทุกโปรเจกต์ */
+.item-rose{
+    max-width: 520px;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 16px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+    margin: 0 auto;
+}
+
+/* เอฟเฟกต์ลอยตอน hover */
+.item-rose:hover{
+    transform: translateY(-6px);
+}
+/*car*/
+.mini-car{
+    text-align:center;
+    margin-bottom:60px;
+}
+.mini-car h4{
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+.car-content{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;   /* จัดแนวบน */
+    gap:40px;
+    margin-top:20px;
+    
+}
+
+/* กล่องข้อความฝั่งซ้าย */
+.item-car{
+    max-width:500px;
+    text-align:left;
+    line-height: 1.8; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    font-size: 16px; /* ปรับขนาดตัวอักษร */
+    margin-top:30px;
+}
+.item-car p{
+    margin: 0;
+}
+/* กล่องข้อความทุกโปรเจกต์ */
+.item-car{
+    max-width: 520px;
+    text-align: left;
+    line-height: 1.9;
+    font-size: 16px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+/* เอฟเฟกต์ลอยตอน hover */
+.item-car:hover{
+    transform: translateY(-6px);
+}
+/* รูปฝั่งขวา */
+.img-car img{
+    width:350px;
+    height:auto;
+    border-radius:15px;
+}
+/*plc*/
+.plc {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.plc-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* จอเล็กจะเรียงลง */
+    margin-top: 20px;
+}
+
+.img-plc img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.item-plc {
+    max-width: 450px;
+    text-align: left;
+}
+/* กล่องข้อความทุกโปรเจกต์ */
+.item-plc{
+    max-width: 520px;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 16px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+/* เอฟเฟกต์ลอยตอน hover */
+.item-plc:hover{
+    transform: translateY(-6px);
+}
+/*หน้าฝึกงาน*/
+
+.logo4 a img{
+    width: 85px;
+    height: auto;
+}
+
+.Profile{ /* ดึงข้อมูลในคลาสมาใช้ */
+    max-width: 1140px; 
+    margin: 0 auto;
+}
+
+nav{
+    padding: 1rem;
+    background-color: #911005; /* สีแถบเมนู */
+}
+
+.nav-pro{
+    display: flex;
+    justify-content: space-between; /* จัดวางโลโก้และเมนูให้ห่างกัน */
+    align-items: center; /* จัดวางให้อยู่กึ่งกลางแนว*/
+}
+.profile-content h1{
+    margin: 2rem 0; /* เว้นระยะห่างด้านบนและล่าง */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+.supavut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* จอเล็กจะเรียงลง */
+    margin-top: 20px;
+    padding: 1rem;
+}
+.item-p{
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 16px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+/* เอฟเฟกต์ลอยตอน hover */
+.item-p:hover{
+    transform: translateY(-6px);
+}
+.supavut-img img{
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;   /* ปรับตามต้องการ */
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.item-supavut{
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 16px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+/* เอฟเฟกต์ลอยตอน hover */
+.item-supavut:hover{
+    transform: translateY(-6px);
+}
+.img-su-row{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+    flex-wrap: wrap;   /* จอเล็กจะลงบรรทัด */
+}
+
+.item-su img{
+    width: 300px;      /* ปรับขนาดได้ */
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+.img-su-row2{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+    flex-wrap: wrap;   /* จอเล็กจะลงบรรทัด */
+}
+.content-profile h1{
+    margin: 2rem 0; /* เว้นระยะห่างด้านบนและล่าง */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+.profile-section p{
+    margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+.profile p{
+    margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+/*แข่งรถบังคับ*/
+.Hackathon h4{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.item-hackathon img{
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;   /* ปรับตามต้องการ */
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.item-hackathon p{
+    margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 16px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+/* เอฟเฟกต์ลอยตอน hover */
+.item-hackathon p:hover{
+    transform: translateY(-6px);
+}
+.item-imgH-row{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+    flex-wrap: wrap;   /* จอเล็กจะลงบรรทัด */
+}
+.item-imgH-row img{
+    width: 300px;      /* ปรับขนาดได้ */
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+.item-img-cer img{
+    max-width: 700px;   /* ปรับตามต้องการ */
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+.content-profile p{
+    margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+
+
+
+
+
+/*ปุ่มย้อนกลับไปด้านบน*/
+#backToTop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #b30000;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;              /* ซ่อนก่อน */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+#backToTop:hover{
+    transform: translateY(-5px);
+}
