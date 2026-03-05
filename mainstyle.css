@@ -175,7 +175,6 @@ nav{
 }
 
 .profile-item{ /* ข้อมูลในโปรไฟล์ */
-    align-items: center; /* จัดวางให้อยู่กึ่งกลางแนวตั้ง */
     gap: 2rem; /* เว้นระยะห่างระหว่างข้อมูลในโปรไฟล์ */
 }
 .profile-item{
@@ -205,8 +204,15 @@ nav{
 .profile-item p{ /* เนื้อหาในโปรไฟล์ */
     margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
     padding-left: 2rem; /* เพิ่มพื้นที่ด้านซ้าย */
+    text-align: left; /* จัดข้อความให้อยู่ชิดซ้าย */
 }
+.skill-list{
+    text-align: left;
+    padding-left: 20px;
+    line-height: 1.8;
+    list-style: disc;
 
+}
 
 /* จัดการแบนเนอร์ล่างสุด */
 .footer-top{
@@ -858,4 +864,44 @@ nav{
 
 #backToTop:hover{
     transform: translateY(-5px);
+}
+
+.cermec{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+    flex-wrap: wrap;   /* จอเล็กจะลงบรรทัด */
+}
+.cermec img{
+    width: 300px;      /* ปรับขนาดได้ */
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+.cerplc{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+    flex-wrap: wrap;   /* จอเล็กจะลงบรรทัด */
+}
+.cerplc img{
+    width: 300px;      /* ปรับขนาดได้ */
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+.cerdigi{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+    flex-wrap: wrap;   /* จอเล็กจะลงบรรทัด */
+}
+.cerdigi img{
+    width: 300px;      /* ปรับขนาดได้ */
+    height: auto;
+    border-radius: 15px;
+    display: block;
 }
