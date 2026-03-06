@@ -39,6 +39,14 @@ nav{
     height: auto;
    
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.logo img{
+    transition: 0.3s;
+}
+
+.logo img:hover{
+    transform: scale(1.05);
+}
 
 .menu {
     list-style: none; /* เอาจุดหน้าเมนูออก */
@@ -108,6 +116,14 @@ nav{
 .maincontent-img{ /* ใส่แยกออกจากการจัดการรูปโดยตรงเพราะขอบมันจะบังมุมโค้ง*/
     padding: 2rem;
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.maincontent-img img{
+    transition: 0.3s;
+}
+
+.maincontent-img img:hover{
+    transform: scale(1.05);
+}
 /*ทำเลื่อนภาพ*/
 .content {
   overflow: hidden;
@@ -141,7 +157,14 @@ nav{
     height: auto;
     border-radius: 10px; /* ทำให้มุมรูปภาพโค้ง */
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.content-item img{
+    transition: 0.3s;
+}
 
+.content-item img:hover{
+    transform: scale(1.05);
+}
 .content-title{
     margin: 2rem 0; /* เว้นระยะห่างด้านบนและล่าง */
 }
@@ -272,7 +295,14 @@ nav{
     width: 85px;
     height: auto;
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.logo2 img{
+    transition: 0.3s;
+}
 
+.logo2 img:hover{
+    transform: scale(1.05);
+}
 .activity{ /* ดึงข้อมูลในคลาสมาใช้ */
     max-width: 1140px; 
     margin: 0 auto;
@@ -295,7 +325,14 @@ nav{
     gap: 2rem;        /* เว้นระยะห่างรูป */
     flex-wrap: wrap;  /* จอเล็กแล้วลงบรรทัดใหม่ */
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.activity-content img{
+    transition: 0.3s;
+}
 
+.activity-content img:hover{
+    transform: scale(1.05);
+}
 .activity-content h1{
     margin: 2rem 0; /* เว้นระยะห่างด้านบนและล่าง */
 }
@@ -320,6 +357,14 @@ nav{
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+}
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.activity-content-1 img{
+    transition: 0.3s;
+}
+
+.activity-content-1 img:hover{
+    transform: scale(1.05);
 }
 .activity-content-1 h1{
     margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
@@ -468,7 +513,14 @@ nav{
     width: 85px;
     height: auto;
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.logo3 img{
+    transition: 0.3s;
+}
 
+.logo3 img:hover{
+    transform: scale(1.05);
+}
 .Content{ /* ดึงข้อมูลในคลาสมาใช้ */
     max-width: 1140px; 
     margin: 0 auto;
@@ -528,10 +580,44 @@ nav{
     transition: 0.3s ease;
    
 }
+.item-threed-content{
+    max-width: 720px;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 16px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+   
+}
 
 /* เอฟเฟกต์ลอยตอน hover */
-.item-threed:hover{
+.item-threed-content:hover{
     transform: translateY(-6px);
+}
+.img-row{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;   /* 👈 เพิ่มบรรทัดนี้ */
+}
+.item-threed-content{
+    max-width: 720px;
+    width: 100%;   /* 👈 เพิ่ม */
+    text-align: center;
+}
+.item-threed-content{
+    margin-top: 10px;
+}
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.img-threed img{
+    transition: 0.3s;
+}
+
+.img-threed img:hover{
+    transform: scale(1.05);
 }
 /*rose*/
 .mini-rose{
@@ -554,7 +640,14 @@ nav{
     max-width:none;
     border-radius:10px;
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.rose-img-row img{
+    transition: 0.3s;
+}
 
+.rose-img-row img:hover{
+    transform: scale(1.05);
+}
 /* รูปใหญ่ */
 .rose-img-row img:first-child{
     width:350px;
@@ -635,6 +728,15 @@ nav{
     height:auto;
     border-radius:15px;
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.img-car img{
+    transition: 0.3s;
+}
+
+.img-car img:hover{
+    transform: scale(1.05);
+}
+
 /*plc*/
 .plc {
     text-align: center;
@@ -654,6 +756,14 @@ nav{
     width: 350px;
     height: auto;
     border-radius: 10px;
+}
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.img-plc img{
+    transition: 0.3s;
+}
+
+.img-plc img:hover{
+    transform: scale(1.05);
 }
 
 .item-plc {
@@ -683,7 +793,14 @@ nav{
     width: 85px;
     height: auto;
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.logo4 img{
+    transition: 0.3s;
+}
 
+.logo4 img:hover{
+    transform: scale(1.05);
+}
 .Profile{ /* ดึงข้อมูลในคลาสมาใช้ */
     max-width: 1140px; 
     margin: 0 auto;
@@ -736,6 +853,14 @@ nav{
     height: auto;
     border-radius: 15px;
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.supavut-img img{
+    transition: 0.3s;
+}
+
+.supavut-img img:hover{
+    transform: scale(1.05);
+}
 .item-supavut{
     margin: 0 auto;
     text-align: center;
@@ -765,6 +890,14 @@ nav{
     height: auto;
     border-radius: 15px;
     display: block;
+}
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.item-su img{
+    transition: 0.3s;
+}
+
+.item-su img:hover{
+    transform: scale(1.05);
 }
 .img-su-row2{
     display: flex;
@@ -798,6 +931,14 @@ nav{
     height: auto;
     border-radius: 15px;
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.item-hackathon img{
+    transition: 0.3s;
+}
+
+.item-hackathon img:hover{
+    transform: scale(1.05);
+}
 .item-hackathon p{
     margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
     text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
@@ -829,7 +970,7 @@ nav{
     display: block;
 }
 .item-img-cer img{
-    max-width: 700px;   /* ปรับตามต้องการ */
+    max-width: 500px;   /* ปรับตามต้องการ */
     height: auto;
     border-radius: 15px;
     display: block;
@@ -839,10 +980,65 @@ nav{
     margin: 1rem 0; /* เว้นระยะห่างระหว่างย่อหน้า */
     text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.item-imgH-row img{
+    transition: 0.3s;
+}
 
+.item-imgH-row img:hover{
+    transform: scale(1.05);
+}/* เอฟเฟกต์ขยายรูปตอน hover */
+.item-img-cer img{
+    transition: 0.3s;
+}
 
+.item-img-cer img:hover{
+    transform: scale(1.05);
+}
 
-
+/*ปุ่มเพิ่มเติม*/
+/* ตอนเอาเมาส์ไปชี้ */
+.maincontent-btn{ 
+    background: #a80d0d;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+.maincontent-btn:hover{ /* ตอนเอาเมาส์ไปชี้ */
+    background: #d94b4b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+.maincontent-btn:hover{
+    transform: scale(1.05); /* ขยายปุ่มเล็กน้อย */
+}
+.maincontent-btn{
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นมือเมื่อชี้ */
+}
+/*ปุ่มดูกิจกรรมเพิ่มเติม*/
+.content-btn{
+    background: #a80d0d;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+.content-btn:hover{
+    background: #d94b4b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+.content-btn:hover{
+    transform: scale(1.05);
+}
+.content-btn{
+    cursor: pointer;
+}
 
 /*ปุ่มย้อนกลับไปด้านบน*/
 #backToTop{
@@ -879,6 +1075,15 @@ nav{
     border-radius: 15px;
     display: block;
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.cermec img{
+    transition: 0.3s;
+}
+
+.cermec img:hover{
+    transform: scale(1.05);
+}
+
 .cerplc{
     display: flex;
     justify-content: center;
@@ -891,6 +1096,14 @@ nav{
     height: auto;
     border-radius: 15px;
     display: block;
+}
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.cerplc img{
+    transition: 0.3s;
+}
+
+.cerplc img:hover{
+    transform: scale(1.05);
 }
 .cerdigi{
     display: flex;
@@ -905,3 +1118,10 @@ nav{
     border-radius: 15px;
     display: block;
 }
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.cerdigi img{   
+    transition: 0.3s;
+}      
+.cerdigi img:hover{
+    transform: scale(1.05);
+}     
