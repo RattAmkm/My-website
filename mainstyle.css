@@ -619,6 +619,96 @@ nav{
 .img-threed img:hover{
     transform: scale(1.05);
 }
+/*roblox8riw*/
+.roblox8riw{
+    text-align:center;
+    margin-bottom:40px;
+}
+.roblox8riw-pro{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;   /* กันรูปยืดตาม flex */
+    gap:20px;
+    margin:20px 0;
+}
+.roblox8riw-pro img{
+    width:700px;
+    height:auto;
+    border-radius:15px;
+}
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.roblox8riw-pro img{
+    transition: 0.3s;
+}
+
+.roblox8riw-pro img:hover{
+    transform: scale(1.05);
+}
+.padriw-row{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;   /* กันรูปยืดตาม flex */
+    gap:20px;
+    margin:20px 0;
+}
+.padriw-row img{
+    width:350px;
+    height:auto;
+    border-radius:15px;
+}
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.padriw-row img{
+    transition: 0.3s;
+}
+
+.padriw-row img:hover{
+    transform: scale(1.05);
+}
+.padriw-map{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;   /* กันรูปยืดตาม flex */
+    gap:20px;
+    margin:20px 0;
+}
+.padriw-map img{
+    width:700px;
+    height:auto;
+    border-radius:15px;
+}
+/* เอฟเฟกต์ขยายรูปตอน hover */
+.padriw-map img{
+    transition: 0.3s;
+}
+
+.padriw-map img:hover{
+    transform: scale(1.05);
+}
+/* กล่องข้อความทุกโปรเจกต์ */
+.item-roblox8riw{
+    max-width: 520px;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 16px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+    margin: 0 auto;
+}
+/* รีเซ็ตไม่ให้กฎ img อื่นในเว็บมาทับ */
+.roblox8riw-pro img{
+    display:block;
+    height:auto;
+    max-width:none;
+    border-radius:10px;
+}
+
+/* เอฟเฟกต์ลอยตอน hover */
+.item-roblox8riw:hover{
+    transform: translateY(-6px);
+}
 /*rose*/
 .mini-rose{
     text-align:center;
